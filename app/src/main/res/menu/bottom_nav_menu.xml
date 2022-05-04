@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/list_of_goals"
+        android:icon="@drawable/ic_baseline_format_list_numbered_24"
+        android:title="Goals"/>
+
+    <item
+        android:id="@+id/report_of_goals"
+        android:title="Report"
+        android:icon="@drawable/ic_baseline_bar_chart_24"/>
+
+</menu>

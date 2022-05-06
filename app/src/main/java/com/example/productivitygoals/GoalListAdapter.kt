@@ -12,7 +12,7 @@ class GoalListAdapter(private val listOfGoals: List<Goal>) : RecyclerView.Adapte
         fun onBind(goal: Goal) {
             binding.goalTitle.text = goal.title
             binding.goalDueDate.text = goal.dueDate
-            binding.goalCompletionCheckbox.isChecked = goal.completed
+//            binding.goalCompletionCheckbox.isChecked = goal.completed
             binding.goalCategory.text = goal.category
         }
     }

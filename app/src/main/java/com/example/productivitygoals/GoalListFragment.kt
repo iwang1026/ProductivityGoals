@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.productivitygoals.databinding.FragmentGoalListBinding
 
 class GoalListFragment : Fragment() {
@@ -28,6 +29,18 @@ class GoalListFragment : Fragment() {
             val intent = Intent(context, AddGoalActivity::class.java)
             startActivity(intent)
         }
+
+        val goals = listOf(Goal("goal #1", "Exercise", "2022-05-05"),
+            Goal("goal #2", "Exercise", "2022-05-05"),
+            Goal("goal #3", "Productivity", "2022-05-05"),
+            Goal("goal #4", "Reading", "2022-05-05"),
+            Goal("goal #5", "Music", "2022-05-05")
+        )
+
+        val adapter = GoalListAdapter(goals)
+        binding.recyclerViewGoalsList.adapter = adapter
+        binding.recyclerViewGoalsList.layoutManager = LinearLayoutManager(context)
+
     }
 
     //need recycler view adapter here

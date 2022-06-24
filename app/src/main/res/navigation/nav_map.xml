@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_nav_map"
+    app:startDestination="@id/goalListFragment">
+
+    <fragment
+        android:id="@+id/goalListFragment"
+        android:name="com.example.productivitygoals.ui.GoalListFragment"
+        android:label="fragment_goal_list"
+        tools:layout="@layout/fragment_goal_list" >
+        <action
+            android:id="@+id/action_goalListFragment_to_editGoalFragment"
+            app:destination="@id/editGoalFragment" />
+        <action
+            android:id="@+id/action_goalListFragment_to_addGoalFragment"
+            app:destination="@id/addGoalFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editGoalFragment"
+        android:name="com.example.productivitygoals.ui.EditGoalFragment"
+        android:label="fragment_edit_goal"
+        tools:layout="@layout/fragment_edit_goal" />
+
+    <fragment
+        android:id="@+id/addGoalFragment"
+        android:name="com.example.productivitygoals.ui.AddGoalFragment"
+        android:label="fragment_add_goal"
+        tools:layout="@layout/fragment_add_goal" >
+        <action
+            android:id="@+id/action_addGoalFragment_to_goalListFragment"
+            app:destination="@id/goalListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.productivitygoals.ui.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" />
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.example.productivitygoals.ui.ReportFragment"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report" />
+
+</navigation>

@@ -1,19 +1,22 @@
-package com.example.productivitygoals
+package com.example.productivitygoals.ui
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.productivitygoals.databinding.GoalListItemBinding
+import com.example.productivitygoals.models.Goal
 
 class GoalListAdapter(private val listOfGoals: List<Goal>) : RecyclerView.Adapter<GoalListAdapter.ViewHolder>() {
 
-    inner class ViewHolder(val binding: GoalListItemBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(private val binding: GoalListItemBinding): RecyclerView.ViewHolder(binding.root) {
         fun onBind(goal: Goal) {
             binding.goalTitle.text = goal.title
             binding.goalDueDate.text = goal.dueDate
 //            binding.goalCompletionCheckbox.isChecked = goal.completed
             binding.goalCategory.text = goal.category
+            binding.cardGoal.setOnClickListener {
+
+            }
         }
     }
 
